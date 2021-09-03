@@ -1,10 +1,8 @@
 public class Player {
 
-
     private int id;
     private int inputs = 0;
     private char sign;
-
 
     public Player(int id, char sign) {
         this.id = id;

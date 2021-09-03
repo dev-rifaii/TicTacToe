@@ -10,14 +10,10 @@ public class Main {
         board.drawBoard();
         board.setCurrentPlayer(player1);
 
-
         while (!board.isResult()) {
-
 
             int row, col;
             Scanner scan = new Scanner(System.in);
-
-
             System.out.println("\nPlayer " + board.getCurrentPlayer().getId() + ": ");
             do {
                 System.out.println("Please enter row number (1 to 3)");
@@ -27,7 +23,6 @@ public class Main {
                 col = scan.nextInt() - 1;
 
             }
-
             while (row > 2 || row < 0 || col > 2 || col < 0 || !board.takeInput(row, col, board.getCurrentPlayer()));
 
             board.takeInput(row, col, board.getCurrentPlayer());
@@ -40,19 +35,12 @@ public class Main {
 
                 System.out.println("\nPlayer " + board.getCurrentPlayer().getId() + " won the game!");
                 board.setResult(true);
-
             }
             if (turns > 8) {
                 System.out.println("\nDraw!");
                 board.setResult(true);
             }
             board.switchPlayer(player1, player2);
-
-
         }
-
-
     }
-
-
 }

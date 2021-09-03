@@ -1,10 +1,8 @@
-
-
 public class Board {
+
     char[][] board = new char[3][3];
     private Player currentPlayer;
     private boolean result;
-
 
     public void setCurrentPlayer(Player player) {
         this.currentPlayer = player;
@@ -36,7 +34,6 @@ public class Board {
 
         return false;
     }
-
 
     public void drawBoard() {
         for (int row = 0; row < board.length; row++) {
